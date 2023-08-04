@@ -1,15 +1,16 @@
 <style>
     .header--desktop .header__container {
-    position: fixed;
-    background-color: white;
-    left: 50%;
-    margin-left: -700px;
-    width: 1400px;
-    max-width: 100%;
-    min-height: 103px;
-    padding: 10px 20px 0;
-    display: flex;
+        position: fixed;
+        background-color: white;
+        left: 50%;
+        margin-left: -700px;
+        width: 1400px;
+        max-width: 100%;
+        min-height: 103px;
+        padding: 10px 20px 0;
+        display: flex;
     }
+
     @media screen and (max-width: 1400px) {
         .header--desktop .header__container {
             left: 0;
@@ -19,23 +20,34 @@
     }
 
     .header--mobile .header__menu {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    align-items: center;
-    justify-content: space-between;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    #wrapper{
-    margin-top:103px;
+    #wrapper {
+        margin-top: 103px;
     }
+
     @media screen and (max-width: 1200px) {
-        #wrapper{
-        margin-top:60px;
+        #wrapper {
+            margin-top: 60px;
+        }
     }
+
+    /* 隱藏電腦版商品資訊標籤 */
+    .quick-cart-body .variant-gallery-stage>a:last-child {
+        display: none;
     }
-    
+
+    /* 隱藏手機版商品資訊標籤 */
+    a.ng-binding {
+        display: none;
+    }
+
     .fv {
         width: 100%;
 
@@ -133,7 +145,8 @@
         position: relative
     }
 
-    .color_3btn, .color_2btn{
+    .color_3btn,
+    .color_2btn {
         display: flex;
     }
 
@@ -283,7 +296,7 @@
         }
     }
 
-    .CustomPage .quick-cart-price{
+    .CustomPage .quick-cart-price {
         display: none;
     }
 </style>
@@ -306,14 +319,15 @@
                     <!-- <p><span id="lastday"></span>前免國際運費</p> -->
                 </div>
                 <img src="https://viage-lp.github.io/shopline_lnubhk/images/01.png" alt="" />
-        
+
 
                 <div class="video_box">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/03.png" alt="">
-                    <video class="video01" src="https://viage-lp.github.io/shopline_lnubhk/video/video01.mov" loop autoplay
-                        muted playsinline>
+                    <video class="video01" src="https://viage-lp.github.io/shopline_lnubhk/video/video01.mov" loop
+                        autoplay muted playsinline>
                         <source src="https://viage-lp.github.io/shopline_lnubhk/video/video01.mov" type="video/mp4">
-                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video01.mov/video.ogg" type="video/ogg">
+                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video01.mov/video.ogg"
+                            type="video/ogg">
                     </video>
                 </div>
                 <img src="https://viage-lp.github.io/shopline_lnubhk/images/04.png" alt="">
@@ -322,110 +336,110 @@
                 <div class="color_box">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_title_1.png" alt="">
                     <div class="color_2btn trigger_01">
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_02.png" alt=""
-                          data-show="02">
-                      </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_02.png"
+                                alt="" data-show="02">
+                        </div>
                     </div>
                     <div class="show_01"></div>
-        
+
                     <div class="color_2btn trigger_02">
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_02.png" alt=""
-                          data-show="02">
-                      </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_02.png"
+                                alt="" data-show="02">
+                        </div>
                     </div>
                     <div class="show_02"></div>
-        
+
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_title_02.png" alt="">
                     <div class="color_3btn trigger_03">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_03"></div>
-        
+
                     <div class="color_3btn trigger_04">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_04"></div>
-        
+
                     <div class="color_3btn trigger_05">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_05"></div>
-        
+
                     <div class="color_3btn trigger_06">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_06"></div>
-        
+
                     <div class="color_2btn trigger_07">
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_02.png" alt=""
-                          data-show="02">
-                      </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_02.png"
+                                alt="" data-show="02">
+                        </div>
                     </div>
                     <div class="show_07"></div>
-                  </div>
+                </div>
                 <!-- <a href="#buy">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/07_offer.png" alt="">
                 </a> -->
-                
+
                 <a href="#buy">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/lunbhk-5.png" alt="">
                 </a>
@@ -447,26 +461,29 @@
                 <img src="https://viage-lp.github.io/shopline_lnubhk/images/11.png" alt="">
                 <div class="video_box">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/12.png" alt="">
-                    <video class="video02" src="https://viage-lp.github.io/shopline_lnubhk/video/video02.mov" loop autoplay
-                        muted playsinline>
+                    <video class="video02" src="https://viage-lp.github.io/shopline_lnubhk/video/video02.mov" loop
+                        autoplay muted playsinline>
                         <source src="https://viage-lp.github.io/shopline_lnubhk/video/video02.mov" type="video/mp4">
-                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video02.mov/video.ogg" type="video/ogg">
+                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video02.mov/video.ogg"
+                            type="video/ogg">
                     </video>
                 </div>
                 <div class="video_box">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/13.png" alt="">
-                    <video class="video03" src="https://viage-lp.github.io/shopline_lnubhk/video/video03.mov" loop autoplay
-                        muted playsinline>
+                    <video class="video03" src="https://viage-lp.github.io/shopline_lnubhk/video/video03.mov" loop
+                        autoplay muted playsinline>
                         <source src="https://viage-lp.github.io/shopline_lnubhk/video/video03.mov" type="video/mp4">
-                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video03.mov/video.ogg" type="video/ogg">
+                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video03.mov/video.ogg"
+                            type="video/ogg">
                     </video>
                 </div>
                 <div class="video_box">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/14.png" alt="">
-                    <video class="video04" src="https://viage-lp.github.io/shopline_lnubhk/video/video04.mov" loop autoplay
-                        muted playsinline>
+                    <video class="video04" src="https://viage-lp.github.io/shopline_lnubhk/video/video04.mov" loop
+                        autoplay muted playsinline>
                         <source src="https://viage-lp.github.io/shopline_lnubhk/video/video04.mov" type="video/mp4">
-                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video04.mov/video.ogg" type="video/ogg">
+                        <source src="https://viage-lp.github.io/shopline_lnubhk/video/video04.mov/video.ogg"
+                            type="video/ogg">
                     </video>
                 </div>
                 <img src="https://viage-lp.github.io/shopline_lnubhk/images/15.png" alt="">
@@ -477,7 +494,7 @@
                 <img src="https://viage-lp.github.io/shopline_lnubhk/images/22.png" alt="">
                 <img src="https://viage-lp.github.io/shopline_lnubhk/images/23.png" alt="">
                 <img src="https://viage-lp.github.io/shopline_lnubhk/images/24.png" alt="">
-                
+
                 <!-- <a href="#buy">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/07_offer.png" alt="">
                 </a> -->
@@ -497,107 +514,107 @@
                 <a href="#buy">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/lunbhk-1.png" alt="">
                 </a>
-                
+
                 <div class="color_box">
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_title_1.png" alt="">
                     <div class="color_2btn trigger_01">
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_02.png" alt=""
-                          data-show="02">
-                      </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn01_02.png"
+                                alt="" data-show="02">
+                        </div>
                     </div>
                     <div class="show_01"></div>
-        
+
                     <div class="color_2btn trigger_02">
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_02.png" alt=""
-                          data-show="02">
-                      </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn02_02.png"
+                                alt="" data-show="02">
+                        </div>
                     </div>
                     <div class="show_02"></div>
-        
+
                     <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_title_02.png" alt="">
                     <div class="color_3btn trigger_03">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn03_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_03"></div>
-        
+
                     <div class="color_3btn trigger_04">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn04_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_04"></div>
-        
+
                     <div class="color_3btn trigger_05">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn05_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_05"></div>
-        
+
                     <div class="color_3btn trigger_06">
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_02.png" alt=""
-                          data-show="02">
-                      </div>
-                      <div class="col-4 p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_03.png" alt=""
-                          data-show="03">
-                      </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_02.png"
+                                alt="" data-show="02">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn06_03.png"
+                                alt="" data-show="03">
+                        </div>
                     </div>
                     <div class="show_06"></div>
-        
+
                     <div class="color_2btn trigger_07">
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_01.png" alt=""
-                          data-show="01">
-                      </div>
-                      <div class="col p-0">
-                        <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_02.png" alt=""
-                          data-show="02">
-                      </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_01.png"
+                                alt="" data-show="01">
+                        </div>
+                        <div class="col p-0">
+                            <img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/06_color_btn07_02.png"
+                                alt="" data-show="02">
+                        </div>
                     </div>
                     <div class="show_07"></div>
                 </div>
@@ -629,20 +646,28 @@
     // 點選左上角logo不跳轉
     $('a[href="/"]').click(function (e) {
         e.preventDefault();
-        return; 
+        return;
     });
 
     // 點選下方商品列表不跳轉
     $('a[href*="https://nextagetwbra.shoplineapp.com/products/"]').click(function (e) {
         e.preventDefault();
-        return; 
+        return;
     });
+
+    // 提示購物車按鈕電腦版/手機版
+    var width = $(window).width();
+    if (width <= 1000) {
+        $("div.title.text-primary-color").text("▼點擊加入購物車▼");
+    } else {
+        $("div.title.text-primary-color").text("▲點擊加入購物車▲");
+    }
 
     // 立即訂購btn動態
     $('a[href="#buy"]').click(function (e) {
         e.preventDefault();
         $('html , body').animate({
-            scrollTop: $('#buy').offset().top-100,
+            scrollTop: $('#buy').offset().top - 100,
         }, 900);
     });
 
@@ -662,39 +687,39 @@
     $('#lastday').text(`${month}/${day}`);
 
     //color區塊互動
-    $(".trigger_01 img").click(function (e) { 
+    $(".trigger_01 img").click(function (e) {
         e.preventDefault();
-        var dataset=$(this).data("show")
+        var dataset = $(this).data("show")
         $(".show_01").html(`<img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/show/01_${dataset}.png" alt="">`)
     });
-    $(".trigger_02 img").click(function (e) { 
+    $(".trigger_02 img").click(function (e) {
         e.preventDefault();
-        var dataset=$(this).data("show")
+        var dataset = $(this).data("show")
         $(".show_02").html(`<img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/show/02_${dataset}.png" alt="">`)
     });
-    $(".trigger_03 img").click(function (e) { 
+    $(".trigger_03 img").click(function (e) {
         e.preventDefault();
-        var dataset=$(this).data("show")
+        var dataset = $(this).data("show")
         $(".show_03").html(`<img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/show/03_${dataset}.png" alt="">`)
     });
-    $(".trigger_04 img").click(function (e) { 
+    $(".trigger_04 img").click(function (e) {
         e.preventDefault();
-        var dataset=$(this).data("show")
+        var dataset = $(this).data("show")
         $(".show_04").html(`<img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/show/04_${dataset}.png" alt="">`)
     });
-    $(".trigger_05 img").click(function (e) { 
+    $(".trigger_05 img").click(function (e) {
         e.preventDefault();
-        var dataset=$(this).data("show")
+        var dataset = $(this).data("show")
         $(".show_05").html(`<img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/show/05_${dataset}.png" alt="">`)
     });
-    $(".trigger_06 img").click(function (e) { 
+    $(".trigger_06 img").click(function (e) {
         e.preventDefault();
-        var dataset=$(this).data("show")
+        var dataset = $(this).data("show")
         $(".show_06").html(`<img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/show/06_${dataset}.png" alt="">`)
     });
-    $(".trigger_07 img").click(function (e) { 
+    $(".trigger_07 img").click(function (e) {
         e.preventDefault();
-        var dataset=$(this).data("show")
+        var dataset = $(this).data("show")
         $(".show_07").html(`<img src="https://viage-lp.github.io/shopline_lnubhk/images/06_color/show/07_${dataset}.png" alt="">`)
     });
 </script>
