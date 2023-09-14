@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Order Email</title>
+    <style type="text/css">
+      * {
+        font-family:Helvetica, Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      table {
+        border-spacing: 0;
+      }
+      table td {
+        border-collapse: collapse;
+      }
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+      .ReadMsgBody {
+        width: 100%;
+        background-color: #ebebeb;
+      }
+      table {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+      .yshortcuts a {
+        border-bottom: none !important;
+      }
+      @media screen and (max-width: 599px) {
+        table[class="force-row"],
+        table[class="container"] {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        td[class*="container-padding"] {
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+        }
+      }
+      footer a {
+        color: #aaaaaa !important;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body style="margin:0; padding:0;" bgcolor="#F0F0F0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0">
+      <tr>
+        <td align="center" valign="top" bgcolor="#F0F0F0" style="background-color: #F0F0F0;">
+          <br>
+          <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" style="width: 600px; max-width: 600px;">
+            <tr>
+              <td class="container-padding content" align="left" style="padding-left: 24px; padding-right: 24px; padding-top: 12px; padding-bottom: 12px; background-color: #ffffff;">
+                <div style="min-height: auto; padding: 15px; text-align: center; max-height: 150px; max-width: 100%;">
+                  <img style="max-height: 150px; max-width: 100%;" src="{{shop.logo}}"/>
+                </div>
+                <br/>
+                <div style="height: 1px; border-bottom: 1px solid #cccccc; clear: both;"></div>
+                <br/>
+                <p style="font-weight: bold; font-size: 18px; line-height: 24px; color: #1c2538;">
+                  [{{order.seller.name}}] 謝謝你的訂單 #{{order.order_number}}!{% if order.is_multiple_orders %}, 此筆為購物車{{ order.checkout_object_number }}中的 {{ order.cart_tag_name }}訂單{% else %}!{% endif %}
+                </p>
+                <p>訂單狀態為：{{order.status_label}}</p>
+                <p>付款狀態為：{{order.order_payment.status_label}}</p>
+                <p>送貨狀態為：{{order.order_delivery.status_label}}</p>
+                <p>有關訂單的查詢或要聯絡{{order.seller.name}}，請登入以下連結。如果還未設立帳戶，請按「忘記密碼」設立你的帳戶。</p>
+                <a
+                  style="{{theme_color}}; padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;"
+                  href="{{order.customer_url}}"
+                >
+                  訂單連結
+                </a>
+
+                {% if order.payment_slip_url %}
+                  <a
+                    style="color: #008edd; padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 10px 24px; display: block; font-size: 14px;"
+                    href="{{order.payment_slip_url}}"
+                  >
+                    <img src="https://static.shoplineapp.com/web/assets/fa-upload-blue.png"/>
+                    付款並上傳明細
+                  </a>
+                {% endif %}
+                <p style="height: 1px; border-bottom: 1px solid #cccccc; clear: both;"></p>
+
+                <a style="{{theme_color}}; padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;" href="https://lunanaturalbra.com/hk/lunabook/" target="_blank">
+                    商品使用手冊
+                </a>
+                
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  訂單日期
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.created_at | date: "%Y-%m-%d %H:%M%p GMT%:z"}}
+                </div>
+
+                {% if order.checkout_object_number %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    購物車編號
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{ order.checkout_object_number }}
+                  </div>
+                {% endif %}
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  訂單號碼
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.order_number}}
+                </div>
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  訂單狀態
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.status_label}}
+                </div>
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  商店
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.seller.name}} (<span style="color: #5087e6">{{order.seller.email}}</span>)
+                </div>
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  訂購人
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{customer.name}}
+                  {% if customer.email %}
+                    (<span style="color: #5087e6">{{customer.email}}</span>)
+                  {% else %}
+                    ({{customer.phone | mask: 'phone'}})
+                  {% endif %}
+                </div>
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  電話號碼
+                </div>
+                {% if customer.phone %}
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{customer.phone | mask: 'phone'}}
+                  </div>
+                {% endif %}
+
+                {% if customer.gender %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    性別
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{customer.gender}}
+                  </div>
+                {% endif %}
+
+                {% if customer.attributes %}
+                  {% for attribute in customer.attributes %}
+                    <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                      {{attribute | first}}
+                    </div>
+                    <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                      {{attribute | last}}
+                    </div>
+                  {% endfor %}
+                {% endif %}
+
+                {% if order.remarks != '' %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    訂單備註
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.remarks}}
+                  </div>
+                {% endif %}
+
+                {% for attribute in order.attributes %}
+                  {% if attribute.last != '' %}
+                    <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                      {{attribute | first | escape}}
+                    </div>
+                    <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                      {{attribute | last}}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  付款方式
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.order_payment.name}}
+                </div>
+
+                {% if order.order_payment.instructions != '' %}
+                  <div style="margin-bottom: 5px; font-size: 12px;color: #333333; text-transform: uppercase;">
+                    付款指示
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;" style-"white-space: pre-wrap;">
+                    {{order.order_payment.instructions}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_payment.instruction_image %}
+                  <a
+                    style="display: inline-block" target="_blank"
+                    href="{{order.order_payment.instruction_image.src | img_url: '750x'}}"
+                  >
+                    <img
+                      style="float: left; max-height: 160px; max-width:100%"
+                      src="{{order.order_payment.instruction_image.src | img_url: '750x'}}"
+                    >
+                  </a>
+                {% endif %}
+
+                {% if order.order_payment.type.to_s == 'paypal' %}
+                  {% if order.order_payment.txn_id %}
+                    <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                      Paypal交易編號
+                    </div>
+                    <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                      {{order.order_payment.txn_id}}
+                    </div>
+                  {% endif %}
+                {% endif %}
+
+                {% if order.order_payment.transaction_id %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    交易序號
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_payment.transaction_id}}
+                  </div>
+                {% endif %}
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  付款狀態
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.order_payment.status_label}}
+                  {% if order.payment_slip_url %}
+                    ，完成付款請
+                    <br />
+                    <a
+                      style="display: inline-block; padding: 10px 15px; background-color: #008edd; text-decoration: none; color: #fff; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;"
+                      href="{{order.payment_slip_url}}"
+                    >
+                      <img src="https://static.shoplineapp.com/web/assets/fa-upload-white.png"/>
+                      付款並上傳明細
+                    </a>
+                  {% endif %}
+                </div>
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  送貨方式
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.order_delivery.name}}
+                </div>
+
+                {% if order.delivery_date %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    到貨時間
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.delivery_date | date: "%Y-%m-%d"}} {{order.delivery_time_slot}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.description %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    送貨詳情
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.description}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.store_address %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    地址
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.store_address}}
+                  </div>
+                {% elsif order.order_delivery.address %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    地址
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.address.recipient_name}}
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.address.address1}}
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.address.address2}}
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.address.city}}
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.address.state}}
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.address.country}}
+                  </div>
+                  <div style="margin-bottom: 5px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.address.postcode}}
+                  </div>
+                  <span style="height: 10px; display: block;"></span>
+                {% endif %}
+
+                {% if order.order_delivery.recipient_name %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    收件人
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.recipient_name}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.recipient_phone %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    收件人電話號碼
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.recipient_phone | mask: 'phone'}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.location_code %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    收件門市代號
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.location_code}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.location_name %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    收件門市名稱
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.location_name}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.delivery_name %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    {{order.order_delivery.delivery_name_title}}
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.delivery_name}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.tracking_number %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    貨件追蹤號碼
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.tracking_number}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.url %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    貨件追蹤 URL
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.url}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.shipment_number %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    取件編號
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.shipment_number}}
+                  </div>
+                {% endif %}
+
+                {% if order.order_delivery.sn_id %}
+                  <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                    店到店編號
+                  </div>
+                  <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                    {{order.order_delivery.sn_id}}
+                  </div>
+                {% endif %}
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  送貨狀態
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px; color: #555555;">
+                  {{order.order_delivery.status_label}}
+                </div>
+
+                <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                  訂單詳情
+                </div>
+
+                <table style="width: 100%; font-size: 12px; color: #333333;">
+                  {% for line_item in order.line_items %}
+                    <tr>
+                      <td>
+                        <table style="font-size: 12px; color:#333333;">
+                          <tr>
+                            {% if line_item.image_url %}
+                              <td style="vertical-align: top; padding-right: 10px; padding-bottom: 15px;">
+                                <a href="#" target="_blank">
+                                  <img
+                                    width="80"
+                                    height="80"
+                                    src="{{line_item.image_url}}"
+                                    alt=""
+                                    style="object-fit: cover;"
+                                  >
+                                </a>
+                              </td>
+                            {% endif %}
+                            <td style="vertical-align: top">
+                              {% if line_item.image_url %}
+                                <div>
+                              {% else %}
+                                <div style="margin: 0 0 35px 90px">
+                              {% endif %}
+                                {% if line_item.title %}
+                                  {% if line_item.type == 'AddonProduct' %}
+                                    <span style="padding: 2px 10px; background-color: #777; display: inline-block; font-size: 75%; color: #fff; margin-bottom: 3px;">
+                                      加購品
+                                    </span>
+                                    <br>
+                                  {% endif %}
+                                  {% if line_item.type == 'Gift' %}
+                                    <span style="padding: 2px 10px; background-color: #777; display: inline-block; font-size: 75%; color: #fff; margin-bottom: 3px;">
+                                      贈品
+                                    </span>
+                                    <br>
+                                  {% endif %}
+                                  <p style="margin:0 3px 3px;">
+                                    {{line_item.title}}
+                                  </p>
+                                {% endif %}
+                                {% for name in line_item.variation_names %}
+                                  <p style="margin:0 3px 3px;">
+                                    {{name}}
+                                  </p>
+                                {% endfor %}
+                                <ul style="margin: 4px 12px 12px 8px; padding-left: 0;">
+                                  {% for row_data in line_item.child_products_raw_data %}
+                                    <li style="margin-left: 8px; padding-left: 0;">
+                                      {% if row_data.quantity %}
+                                        {{ row_data.title_translations }} x {{ row_data.quantity }}
+                                      {% else %}
+                                        {{ row_data.title_translations }}
+                                      {% endif %}
+                                      {% if row_data.field_translations %}
+                                        <span style="color: #777; display: block;">
+                                          {{ row_data.field_translations }}
+                                        </span>
+                                      {% endif %}
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+
+                                <p style="margin:0 3px 15px;">
+                                  {% if line_item.item_points != 0 %}
+                                    {{line_item.quantity}} x {{line_item.item_points}} 點
+                                  {% else %}
+                                    {{line_item.quantity}} x {{line_item.price}}
+                                  {% endif %}
+
+                                  {% if line_item.preorder_note %}
+                                    <br>
+                                    <div class="subtext preorder-label">
+                                      {{line_item.preorder_note}}
+                                    </div>
+                                  {% endif %}
+
+                                  {% if line_item.catcher_delivery_status %}
+                                    <p style="margin:0 3px 3px; color: #428bca;">
+                                      {{line_item.catcher_delivery_status}}
+                                    </p>
+                                  {% endif %}
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td style="vertical-align: top;">
+                        <div style="text-align: right;">
+                          <span>
+                            {% if line_item.total_points != 0 %}
+                              {{line_item.total_points}} 點
+                            {% else %}
+                              {{line_item.total_price}}
+                            {% endif %}
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  <tr>
+                    <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                      小計:
+                    </td>
+                    <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                      {{order.subtotal_price}}
+                    </td>
+                  </tr>
+                  {% if order.discount_price %}
+                    <tr>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        優惠折扣:
+                      </td>
+                      <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                        -{{order.discount_price}}
+                      </td>
+                    </tr>
+                  {% endif %}
+                  {% if order.custom_discount_price %}
+                    <tr>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        自訂折扣合計:
+                      </td>
+                      <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                        -{{order.custom_discount_price}}
+                      </td>
+                    </tr>
+                  {% endif %}
+                  {% if order.applied_user_credit %}
+                    <tr>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        折抵購物金:
+                      </td>
+                      <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                        -{{order.applied_user_credit}}
+                      </td>
+                    </tr>
+                  {% endif %}
+                  {% if order.redeemed_points_to_cash %}
+                    <tr>
+                      <td style="text-align :right; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        使用點數折現:
+                      </td>
+                      <td style="text-align: right; font-size: 12px; color: #555555; word-break: keep-all;">
+                        -{{order.redeemed_points_to_cash_amount}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #cecaca;">
+                        本次使用 {{order.redeemed_points_to_cash}} 點
+                      </td>
+                    </tr>
+                  {% endif %}
+                  <tr>
+                    <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                      運費:
+                    </td>
+                    <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                      {{order.delivery_fee}}
+                    </td>
+                  </tr>
+                  {% if order.order_payment.fee %}
+                    <tr>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        附加費:
+                      </td>
+                      <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                        {{order.order_payment.fee}}
+                      </td>
+                    </tr>
+                  {% endif %}
+                  {% if order.exclusive_tax %}
+                    <tr>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        稅費:
+                      </td>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px;color: #555555;">
+                        {{order.exclusive_tax.fee}}
+                      </td>
+                    </tr>
+                  {% endif %}
+                  <tr>
+                    <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                      合計:
+                    </td>
+                    <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                      {% if order.total_price %}
+                        {{order.total_price}}
+                      {% else %}
+                        免費
+                      {% endif %}
+                    </td>
+                  </tr>
+                  {% if order.inclusive_tax %}
+                    <tr>
+                      <td colspan="2" style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #cecaca;">
+                        已含税 {{order.inclusive_tax.name}} {{order.inclusive_tax.rate}}%: {{order.inclusive_tax.fee}}
+                      </td>
+                    </tr>
+                  {% endif %}
+                  {% if order.earned_credit_value %}
+                    {% if enable_credit_point_triggerpoint %}
+                      <tr>
+                        <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                          訂單完成後獲得購物金:
+                        </td>
+                        <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                          + {{order.earned_credit_value}} 購物金
+                        </td>
+                      </tr>
+                    {% else %}
+                      <tr>
+                        <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                          付款後獲得購物金:
+                        </td>
+                        <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                          + {{order.earned_credit_value}} 購物金
+                        </td>
+                      </tr>
+                    {% endif %}
+                  {% endif %}
+                  {% if order.redeemed_points_to_gift %}
+                    <tr>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        點數兌換贈品:
+                      </td>
+                      <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                        {{order.redeemed_points_to_gift}} 點
+                      </td>
+                    </tr>
+                  {% endif %}
+                  {% if order.earned_points %}
+                    {% if enable_credit_point_triggerpoint %}
+                      <tr>
+                        <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                          訂單完成後獲得點數:
+                        </td>
+                        <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                          +{{order.earned_points}} 點
+                        </td>
+                      </tr>
+                    {% else %}
+                      <tr>
+                        <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                          取貨後{{order.earned_points_pending_days}}天獲得點數:
+                        </td>
+                        <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                          +{{order.earned_points}} 點
+                        </td>
+                      </tr>
+                    {% endif %}
+                  {% endif %}
+                  {% if order.order_payment.installment.count > 1 %}
+                    <tr>
+                      <td style="text-align: right; padding-bottom: 10px; font-size: 12px; color: #333333; text-transform: uppercase;">
+                        分期付款資訊:
+                      </td>
+                      <td style="text-align: right; padding-left: 16px; padding-bottom: 10px; font-size: 12px; color: #555555; white-space: nowrap;">
+                        每期約{{order.order_payment.installment.pay}}元/分{{order.order_payment.installment.count}}期
+                      </td>
+                    </tr>
+                  {% endif %}
+                </table>
+                <br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="container-padding footer-text" align="left" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; color: #aaaaaa; padding-left: 24px; padding-right: 24px;">
+                <br><br>
+                <strong>{{shop.name}}</strong>
+                <br><br>
+                您會收到這封電郵是由於您使用這個電郵地址在{{shop.name}}下了訂單。
+                <br><br>
+                <br><br>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
