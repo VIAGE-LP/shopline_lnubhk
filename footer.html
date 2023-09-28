@@ -1,3 +1,38 @@
+<!-- 漂浮按鈕 start-->
+<style>
+    .sizelinkbtn {
+        position: fixed;
+        right: 0;
+        bottom: 8px;
+        z-index: 110;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    .sizelinkbtn img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sizelinkbtn {
+            width: 24%;
+            max-width: 170px;
+        }
+    }
+</style>
+<div class="sizelinkbtn">
+    <img src="https://img.shoplineapp.com/media/image_clips/6513f3e8492b7e0023225424/original.png?1695806440" alt="">
+</div>
+<script>
+    $('.sizelinkbtn').click(function (e) {
+        e.preventDefault();
+        $('html , body').animate({
+            scrollTop: $('#sizelink').offset().top - 60,
+        }, 900);
+    });
+</script>
+<!-- 漂浮按鈕 end -->
+
 <style>
     .footer-grid {
         display: flex;
@@ -41,14 +76,17 @@
             width: 25%;
         }
     }
+
     @media screen and (max-width: 500px) {
         .logo svg {
             width: 35%;
         }
     }
-    .footer-grid-item .contact{
+
+    .footer-grid-item .contact {
         text-align: left;
     }
+
     .footer-wrapper .footer-grid-items .text-title {
         margin-bottom: 14px;
     }
