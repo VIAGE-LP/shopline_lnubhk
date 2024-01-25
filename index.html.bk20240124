@@ -1,0 +1,546 @@
+<!-- <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/css/bootstrap_custom.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://lunanaturalbra.com/lnub/css/style.css" />
+<link rel="stylesheet" href="https://lunanaturalbra.com/lnub/css/countdown.css" />
+
+<!-- shopline offer css -->
+<style>
+    /* 隱藏第一個商品列表 */
+    div#shopline-section-16889780404634e1f28b:nth-child(1) {
+        display: none !important;
+    }
+
+    #product-list__products__1691658726756013023f {
+
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .section-width {
+        padding: 0px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #shopline-section-16889780404634e1f28b .section-width {
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    /* @media (min-width: 768px) {
+    #shopline-section-16889780404634e1f28b .section-width {
+      width: 640px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+  } */
+
+    @media screen and (max-width: 767px) {
+        .product-list-custom-padding__1691658726756013023f {
+            padding: 0;
+        }
+
+        #product-list__products__1691658726756013023f {
+            display: block;
+            grid-template-columns: 100%;
+            grid-template-rows: initial;
+        }
+    }
+</style>
+
+<!-- shopline相關css -->
+<style>
+    .header {
+        z-index: 100;
+    }
+
+    .header--desktop .header__container {
+        position: fixed;
+        background-color: white;
+        left: 50%;
+        margin-left: -700px;
+        width: 1400px;
+        max-width: 100%;
+        min-height: 103px;
+        padding: 10px 20px 0;
+        display: flex;
+    }
+
+    @media screen and (max-width: 1400px) {
+        .header--desktop .header__container {
+            left: 0;
+            margin-left: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .header--mobile .header__menu {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #wrapper {
+        margin-top: 103px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        #wrapper {
+            margin-top: 60px;
+        }
+    }
+
+    /* 隱藏電腦版商品資訊標籤 */
+    .quick-cart-body .variant-gallery-stage>a:last-child {
+        display: none;
+    }
+
+    /* 隱藏手機版商品資訊標籤 */
+    a.ng-binding {
+        display: none;
+    }
+
+    .CustomPage .quick-cart-price {
+        display: none;
+    }
+</style>
+
+<!-- 客製化區塊css -->
+<style>
+    .sizelinkbtn {
+        position: fixed;
+        right: 0;
+        bottom: 8px;
+        z-index: 99;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sizelinkbtn {
+            width: 24%;
+            max-width: 170px;
+        }
+    }
+</style>
+
+<div id="wrapper">
+    <div id="container">
+        <!-- 漂浮按鈕 -->
+        <img class="sizelinkbtn" src="https://lunanaturalbra.com/hk/lnubhk2/images/gotop.gif" alt="">
+
+        <div id="contents_standard" class="contents">
+            <!-- selectProductWithProduct -->
+            <!-- ▼自由編集箇所▼ -->
+            <section class="main">
+                <!-- main pc -->
+                <!-- 新版timer -->
+                <div class="cdtimer_box">
+                    <div id="cdtimer">
+                        <div class="countdown">
+                            <picture>
+                                <!-- 圖片大小高度限制50px,寬度小於443px -->
+                                <img class="timer-title"
+                                    src="https://lunanaturalbra.com/hk/lnubhk2/images/timer/sp_timer_title.png"
+                                    alt="キャンペーン終了まで">
+                            </picture>
+                            <div id="countdown" class="main-content">
+                                <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
+                                <div class="timer-box"><span class="hours number"></span><span class="name">小時</span>
+                                </div>
+                                <div class="timer-box"><span class="minutes number"></span><span class="name">分</span>
+                                </div>
+                                <div class="timer-box"><span class="seconds number"></span><span class="name">秒</span>
+                                </div>
+                                <div class="timer-box" style="display: none;"><span
+                                        class="miriseconds number"></span><span class="name">　　</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cdtimer_day">
+                        <div class="countdown">
+                            <picture>
+                                <!-- 圖片大小高度限制50px,寬度小於443px -->
+                                <img class="timer-title"
+                                    src="https://lunanaturalbra.com/hk/lnubhk2/images/timer/sp_timer_day_title.png"
+                                    alt="キャンペーン終了まで">
+                            </picture>
+                            <div id="countdown" class="main-content">
+                                <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fv">
+                    <div id="LP">
+                        <div class="LD">
+                            <span>香港開賣</span>
+                            <span class="lastday" id="lastday">12/31</span>
+                            <span>前免國際運費</span>
+                        </div>
+                        <img src="https://lunanaturalbra.com/hk/lnubhk2/images/01_banner.gif" alt="" />
+                        <div class="video_box">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/images/01/01_bg.png" alt="" />
+                            <video id="fv_video" src="https://lunanaturalbra.com/hk/lnubhk2/images/01/01_video.mp4"
+                                autoplay muted playsinline>
+                                <source src="https://lunanaturalbra.com/hk/lnubhk2/images/01/01_video.mov"
+                                    type="video/mp4" />
+                                <source src="https://lunanaturalbra.com/hk/lnubhk2/images/01/01_video.ogg"
+                                    type="video/ogg" />
+                            </video>
+                        </div>
+                        <img id="videolink" src="https://lunanaturalbra.com/hk/lnubhk2/images\2_set_1_1.jpg" />
+                        <img class="io_scaling" src="https://lunanaturalbra.com/hk/lnubhk2/images\2_set_1_2.png">
+                        <img src="https://lunanaturalbra.com/hk/lnubhk2/images\3_intro.png" />
+                        <img src="https://lunanaturalbra.com/hk/lnubhk2/images\3_Fintro.gif" />
+                        <div class="video_box">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk22309/images/03-3.png" alt="" />
+                            <video class="video01" src="https://lunanaturalbra.com/Lshare/video/video01.mov" loop
+                                autoplay muted playsinline>
+                                <source src="https://lunanaturalbra.com/Lshare/video/video01.mov" type="video/mp4" />
+                            </video>
+                        </div>
+                        <!-- <img src="https://lunanaturalbra.com/hk/lnubhk22309/images/08.png" alt="" /> -->
+                        <img src="https://lunanaturalbra.com/hk/lnubhk22309/images/20.png" alt="" />
+                        <!-- <img src="https://lunanaturalbra.com/Lshare/images/06_color.png" alt="" /> -->
+                        <div class="color_box">
+                            <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_title_1.png" alt="">
+                            <div class="color_2btn trigger_01">
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn01_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn01_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                            </div>
+                            <div class="show_01"><img
+                                    src="https://lunanaturalbra.com/Lshare/images/06_color/show/01_01.png" alt=""></div>
+
+                            <div class="color_2btn trigger_02">
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn02_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn02_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                            </div>
+                            <div class="show_02"></div>
+
+                            <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_title_02.png" alt="">
+                            <div class="color_3btn trigger_03">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn03_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn03_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn03_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_03"></div>
+
+                            <div class="color_3btn trigger_04">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn04_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn04_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn04_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_04"></div>
+
+                            <div class="color_3btn trigger_05">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn05_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn05_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn05_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_05"></div>
+
+                            <div class="color_3btn trigger_06">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn06_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn06_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn06_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_06"></div>
+
+                            <div class="color_3btn trigger_07">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn07_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn07_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn07_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_07"></div>
+                        </div>
+                        <div class="product-list-custom-padding__1691658726756013023f">
+                            <div class="product-list__container">
+                                <div class="product-list__product" product-id="656841f7de09e6001139729b">
+
+                                    <div class="product-item">
+                                        <product-item product-id="656841f7de09e6001139729b"
+                                            ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
+                                            class="ng-scope quick-cart-mobile" modal-window-class="">
+                                            <img class="btn-add-to-cart js-btn-add-to-cart"
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/images/07_offer.png" alt=""
+                                                style="cursor: pointer;">
+                                        </product-item>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://lunanaturalbra.com/hk/lnubhk22309/images/nayami.png" alt="" />
+                        <img src="https://lunanaturalbra.com/hk/lnubhk22309/images/nayami-2.png" alt="" />
+                        <img src="https://lunanaturalbra.com/Lshare/images/11.png" alt="" />
+                        <div class="video_box">
+                            <img src="https://lunanaturalbra.com/Lshare/images/12.png" alt="" />
+                            <video class="video02" src="https://lunanaturalbra.com/Lshare/video/video02.mov" loop
+                                autoplay muted playsinline>
+                                <source src="https://lunanaturalbra.com/Lshare/video/video02.mov" type="video/mp4" />
+                                <source src="https://lunanaturalbra.com/Lshare/video/video02.mov/video.ogg"
+                                    type="video/ogg" />
+                            </video>
+                        </div>
+                        <div class="video_box">
+                            <img src="https://lunanaturalbra.com/Lshare/images/13.png" alt="" />
+                            <video class="video03" src="https://lunanaturalbra.com/Lshare/video/video03.mov" loop
+                                autoplay muted playsinline>
+                                <source src="https://lunanaturalbra.com/Lshare/video/video03.mov" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="video_box">
+                            <img src="https://lunanaturalbra.com/Lshare/images/14.png" alt="" />
+                            <video class="video04" src="https://lunanaturalbra.com/Lshare/video/video04.mov" loop
+                                autoplay muted playsinline>
+                                <source src="https://lunanaturalbra.com/Lshare/video/video04.mov" type="video/mp4" />
+                            </video>
+                        </div>
+                        <img src="https://lunanaturalbra.com/Lshare/images/15.png" alt="" />
+                        <img src="https://lunanaturalbra.com/Lshare/images/18.png" alt="" />
+                        <img src="https://lunanaturalbra.com/Lshare/images/19.png" alt="" />
+                        <img src="https://lunanaturalbra.com/Lshare/images/22.png" alt="" />
+                        <img src="https://lunanaturalbra.com/Lshare/images/23.png" alt="" />
+                        <img src="https://lunanaturalbra.com/hk/lnubhk2/images/24.png" alt="" />
+
+                        <a id="more_sale"></a>
+                        <div class="product-list-custom-padding__1691658726756013023f">
+                            <div class="product-list__container">
+                                <div class="product-list__product" product-id="656841f7de09e6001139729b">
+
+                                    <div class="product-item">
+                                        <product-item product-id="656841f7de09e6001139729b"
+                                            ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
+                                            class="ng-scope quick-cart-mobile" modal-window-class="">
+                                            <img class="btn-add-to-cart js-btn-add-to-cart"
+                                                src="https://lunanaturalbra.com/hk/lnubhk2/images/07_offer.png" alt=""
+                                                style="cursor: pointer;">
+                                        </product-item>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://lunanaturalbra.com/Lshare/images/05.png" alt="" />
+                        <a id="buy"></a>
+                        <div class="color_box" id="color_box">
+                            <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_title_1.png" alt="">
+                            <div class="color_2btn trigger_01">
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn01_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn01_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                            </div>
+                            <div class="show_01"><img
+                                    src="https://lunanaturalbra.com/Lshare/images/06_color/show/01_01.png" alt=""></div>
+
+                            <div class="color_2btn trigger_02">
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn02_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn02_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                            </div>
+                            <div class="show_02"></div>
+
+                            <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_title_02.png" alt="">
+                            <div class="color_3btn trigger_03">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn03_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn03_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn03_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_03"></div>
+
+                            <div class="color_3btn trigger_04">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn04_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn04_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn04_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_04"></div>
+
+                            <div class="color_3btn trigger_05">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn05_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn05_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn05_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_05"></div>
+
+                            <div class="color_3btn trigger_06">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn06_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/Lshare/images/06_color/06_color_btn06_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn06_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_06"></div>
+
+                            <div class="color_3btn trigger_07">
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn07_01.png"
+                                        alt="" data-show="01">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn07_02.png"
+                                        alt="" data-show="02">
+                                </div>
+                                <div class="col-4 p-0">
+                                    <img src="https://lunanaturalbra.com/hk/lnubhk2/images/06_color/06_color_btn07_03.png"
+                                        alt="" data-show="03">
+                                </div>
+                            </div>
+                            <div class="show_07"></div>
+                        </div>
+
+                        <a id="sizelink"></a>
+                        <img src="https://lunanaturalbra.com/Lshare/images/19.png" alt="" />
+                        <img src="https://lunanaturalbra.com/hk/lnubhk2/images/10_contact.png" alt="" />
+                    </div>
+                    <a href="https://www.facebook.com/lunabra.hk" target="blank">
+                        <picture>
+                            <source media="(min-width:769px)"
+                                srcset="https://lunanaturalbra.com/hk/lnubhk2/imgs/fb_btn.png">
+                            <source media="(max-width:768px)"
+                                srcset="https://lunanaturalbra.com/hk/lnubhk2/imgs/SP_fb_btn.png">
+                            <img class="img-fluid" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/fb_btn.png">
+                        </picture>
+                    </a>
+            </section>
+
+
+            <!-- ▲自由編集箇所▲ -->
+        </div>
+    </div>
+    <br />
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- <script src="https://lunanaturalbra.com/hk/lnubhk2/js/bootstrap.min.js"></script> -->
+<script src="https://lunanaturalbra.com/lnub/js/countdown.js"></script>
+<script src="https://lunanaturalbra.com/lnub/js/all.js"></script>
+
+<script>
+    // 點選左上角logo不跳轉
+    $('a[href="/"]').click(function (e) {
+        e.preventDefault();
+        return;
+    });
+
+    // 漂浮按鈕
+    $('.sizelinkbtn').click(function (e) {
+        e.preventDefault();
+        let innerheight = window.innerHeight;
+        $('html , body').animate({
+            scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
+        }, 900);
+    });
+    // 自動抓取月份最後一天
+    var nowDate = new Date();
+    var year = nowDate.getFullYear()
+    var month = nowDate.getMonth() + 1;
+    month = month < 10 ? '0' + month : month;
+    var lastDay = new Date(`${year}`, `${month}`, 0);
+    var day = lastDay.getDate();
+    day = day < 10 ? '0' + day : day;
+    $('.lastday').text(`${month}/${day}`);
+</script>

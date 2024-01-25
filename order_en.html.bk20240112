@@ -87,10 +87,13 @@
                 <p>Payment Status: {{order.order_payment.status_label}}</p>
                 <p>Delivery Status: {{order.order_delivery.status_label}}</p>
                 <p>If you have questions about your order or want to check the status, please contact {{order.seller.name}} or sign in via the below link. If you have not set up your account, please click "forget password" to retrieve your account.</p>
-                <a style="background-color:#ffffff;color:rgb(0, 0, 0);border:1px solid black; padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;" href="{{order.customer_url}}">
+                <a
+                  style="{{theme_color}}; padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;"
+                  href="{{order.customer_url}}"
+                >
                   VIEW ORDER
                 </a>
-                <a style="background-color:#00DB00;color:white;padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;" href="https://www.lunabrahk.com/pages/lnhkshorts/?utm_source=nextage&utm_medium=thankyou&utm_campaign=thankyou" target="_blank">
+                <a style="background-color:#1bc69d;color:white;padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;" href="https://www.lunabrahk.com/pages/lnhkshorts/?utm_source=nextage&utm_medium=thankyou&utm_campaign=thankyou" target="_blank">
                   Shop natural up shorts
                 </a>
 
@@ -105,12 +108,8 @@
                 {% endif %}
                 <p style="height: 1px; border-bottom: 1px solid #cccccc; clear: both;"></p>
 
-                <a style="background-color:#ffffff;color:rgb(0, 0, 0);border:1px solid black; padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;" href="https://lunanaturalbra.com/hk/lunabook/" target="_blank">
+              <a style="{{theme_color}}; padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;" href="https://lunanaturalbra.com/hk/lunabook/" target="_blank">
                     Luna Book
-                </a>
-                <p>Complete our quick survey for your chance to win a gift!</p>
-                <a style="background-color:#FF70B0;color:rgb(0, 0, 0);padding: 10px 30px; text-decoration: none; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase; margin: 10px 0; display: block; font-size: 14px;" href="https://forms.gle/Mj9oFH3GS6AEbhDE7" target="_blank">
-                  Fill Out Our Survey Now
                 </a>
                 <div style="margin-bottom: 5px; font-size: 12px; color: #333333; text-transform: uppercase;">
                   Order Date
