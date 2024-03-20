@@ -11,6 +11,7 @@
     new WOW().init();
 </script> -->
 
+
 <!-- shopline offer css -->
 <style>
     /* 隱藏第一個商品列表 */
@@ -164,15 +165,6 @@
         margin: 0;
     }
 
-    .bg_modelCarousel--mid .row>* {
-        flex-shrink: 0;
-        width: 100%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        margin-top: var(--bs-gutter-y);
-    }
-
     .sizelinkbtn {
         position: fixed;
         right: 0;
@@ -193,12 +185,17 @@
     .color_box_layout {
         padding-top: 3%;
         background-color: #FDEFE8;
-        padding-bottom: 5%;
-
-        max-width: 1000px;
+        padding-bottom: 2%;
+        max-width: 640px;
         width: 100%;
         margin: 0 auto;
         overflow: hidden;
+    }
+    @media screen and (max-width: 768px) {
+        .color_box_layout {
+            padding-top: 6%;
+            padding-bottom: 5%;
+        }
     }
 
     .color_box_layout .content {
@@ -211,7 +208,7 @@
     }
 
     .price_text_title {
-        font-size: 5rem;
+        font-size: 3rem;
         font-weight: 600;
         color: #000000;
         margin-top: 0;
@@ -226,18 +223,18 @@
 
     .price_text {
         word-wrap: break-word;
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         font-weight: 600;
-        padding-bottom: 15px;
+        padding-bottom: 11px;
     }
 
     .discount_price_text {
         word-wrap: break-word;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         color: #ff3d3d;
         font-weight: 600;
         text-shadow: 2px 2px 4px #e68173;
-        padding-bottom: 20px;
+        padding-bottom: 11px;
     }
 
     .color-add-btn {
@@ -409,6 +406,37 @@
         animation: bounce 2.0s infinite ease-in-out;
     }
     /* offer_box區塊 */
+
+    /* 輪播區塊 */
+    .carousel_box{
+        width:640px;
+        display: block;
+        margin:0 auto;
+    }
+    @media screen and (max-width:768px) {
+        .carousel_box{
+            width:100%;
+        }
+    }
+    .content{
+        position: relative;
+    }
+
+    .bg_modelCarousel--mid .row>* {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+
+    .card-img img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    /* 輪播區塊 */
 </style>
 
 <div id="wrapper">
@@ -652,6 +680,232 @@
                         </div>
                         <div class="show_07"></div>
                     </div>
+
+                    
+                    <!-- 輪播區塊 -->
+                    <section class="bg bg_midoffer1 carousel_box">
+                        <div class="content">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png" alt="">
+                            <img class="midoffer_title1 wow animate__fadeInUp animate__animated" style="position: absolute;top: 9%;right: 11%;width: 78%;"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title.png" alt="">
+        
+                            <!-- model輪播圖(中間offer) -->
+                            <div class="bg_modelCarousel--mid wow animate__fadeInUp animate__animated" style="bottom:6%;">
+                                <div class=" text-center my-3">
+                                    <div class="row mx-auto my-auto justify-content-center">
+                                        <div class="carousel slide" id="recipeCarousel" data-bs-ride="carousel">
+                                            <div id="carousel--A" class="carousel-inner" role="listbox">
+                                                <div class="carousel-item active">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/1.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/2.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/3.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/4.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/5.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/6.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/7.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/8.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/9.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/10.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/11.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/12.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/13.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/14.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/15.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/16.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/17.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/18.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev bg-transparent w-aut" data-bs-slide="prev"
+                                                href="#recipeCarousel" role="button" style="width: 7%!important;opacity: 1!important;">
+                                                <span class aria-hidden="true"><img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/Color-Left.webp" style="width:100%;"></span>
+                                            </a>
+                                            <a class="carousel-control-next bg-transparent w-aut" data-bs-slide="next"
+                                                href="#recipeCarousel" role="button" style="width: 7%!important;opacity: 1!important;">
+                                                <span class aria-hidden="true"><img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/Color-Right.webp" style="width:100%;"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <div class="color_box_layout">
                         <div class="d-flex">
@@ -1883,6 +2137,231 @@
                         <div class="show_07"></div>
                     </div>
 
+                    <!-- 輪播區塊 -->
+                    <section class="bg bg_midoffer1 carousel_box">
+                        <div class="content">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png" alt="">
+                            <img class="midoffer_title1 wow animate__fadeInUp animate__animated" style="position: absolute;top: 9%;right: 11%;width: 78%;"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title.png" alt="">
+        
+                            <!-- model輪播圖(中間offer) -->
+                            <div class="bg_modelCarousel--mid wow animate__fadeInUp animate__animated" style="bottom:6%;">
+                                <div class=" text-center my-3">
+                                    <div class="row mx-auto my-auto justify-content-center">
+                                        <div class="carousel slide" id="recipeCarousel_2" data-bs-ride="carousel">
+                                            <div id="carousel--A" class="carousel-inner" role="listbox">
+                                                <div class="carousel-item active">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/1.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/2.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/3.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/4.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/5.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/6.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/7.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/8.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/9.webp">
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/10.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/11.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/12.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/13.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/14.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/15.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/16.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/17.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/18.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-img">
+                                                                <img
+                                                                    src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/19.webp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev bg-transparent w-aut" data-bs-slide="prev"
+                                                href="#recipeCarousel_2" role="button" style="width: 7%!important;opacity: 1!important;">
+                                                <span class aria-hidden="true"><img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/Color-Left.webp" style="width:100%;"></span>
+                                            </a>
+                                            <a class="carousel-control-next bg-transparent w-aut" data-bs-slide="next"
+                                                href="#recipeCarousel_2" role="button" style="width: 7%!important;opacity: 1!important;">
+                                                <span class aria-hidden="true"><img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer/carousel/Color-Right.webp" style="width:100%;"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <a id="sizelink"></a>
                     <img data-src="https://lunanaturalbra.com/Lshare/images/19.png" alt="" />
                     <img src="https://lunanaturalbra.com/hk/lnubhk2/images/10_contact.png" alt="" />
@@ -1903,8 +2382,7 @@
     <br />
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://viage-lp.github.io/shopline_lnubhksta/js/bootstrap_custom.js"></script>
 <!-- <script src="https://lunanaturalbra.com/lnub_new/js/countdown.js"></script> -->
 <script src="https://lunanaturalbra.com/hk/lnubhk/js_0124/lightbox.js"></script>
@@ -1924,5 +2402,25 @@
         $('html , body').animate({
             scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
         }, 900);
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        let items = document.querySelectorAll(".carousel .carousel-item");
+
+        items.forEach((el) => {
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+
+        })
     });
 </script>
