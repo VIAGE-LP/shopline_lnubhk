@@ -11,10 +11,6 @@
     new WOW().init();
 </script> -->
 
-<!-- google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 
 <!-- shopline offer css -->
 <style>
@@ -442,15 +438,6 @@
 
     .content {
         position: relative;
-        background: url(https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png) 100% center;
-        padding: 5% 0;
-    }
-
-    .bg_modelCarousel--mid {
-        position: relative;
-        width: 97%;
-        left: auto;
-        margin: 0 auto;
     }
 
     .bg_modelCarousel--mid .row>* {
@@ -468,49 +455,6 @@
         display: block;
     }
 
-    .carousel_title {
-        font-family: "Noto Sans TC", sans-serif;
-    }
-
-    .carousel_title_small {
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 24px;
-        background-color: #fea9bb;
-        color: #ffffff;
-        margin: 0 auto;
-        width: 52%;
-        padding: 8px;
-        letter-spacing: 3px;
-    }
-
-    .carousel_title_big {
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 52px;
-        color: #fd7d8f;
-        margin: 4% auto;
-        letter-spacing: 10px;
-    }
-
-    .tri {
-        margin: 0 auto;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 18.6px 10px 0 10px;
-        border-color: #fea9bb transparent transparent transparent;
-    }
-
-    @media screen and (max-width:500px) {
-        .carousel_title_small {
-            width: 80%;
-        }
-
-        .carousel_title_big {
-            margin: 4% auto;
-            letter-spacing: 8px;
-            font-size: 42px;
-        }
-    }
     /* 輪播區塊 */
 </style>
 
@@ -758,15 +702,14 @@
                         <div class="show_07"></div>
                     </div> -->
 
+
                     <!-- 輪播區塊 -->
                     <section class="bg bg_midoffer1 carousel_box">
                         <div class="content">
-                            <div class="carousel_title wow animate__fadeInUp animate__animated"
-                                style="width: 100%;text-align: center;">
-                                <p class="carousel_title_small">機能內衣也能有高顏值</p>
-                                <div class="tri"></div>
-                                <p class="carousel_title_big">15色任意選搭!</p>
-                            </div>
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png" alt="">
+                            <img class="midoffer_title1 wow animate__fadeInUp animate__animated"
+                                style="position: absolute;top: 9%;right: 11%;width: 78%;"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title.png" alt="">
 
                             <!-- model輪播圖(中間offer) -->
                             <div class="bg_modelCarousel--mid wow animate__fadeInUp animate__animated"
@@ -992,7 +935,6 @@
                             </div>
                         </div>
                     </section>
-
                     <section class="customer">
                         <iframe id="customer-1" src="https://www.lunabrahk.com/products/luna-bra-2-2" width="600"
                             height="500" frameborder="0"></iframe>
@@ -2303,12 +2245,10 @@
                     <!-- 輪播區塊 -->
                     <section class="bg bg_midoffer1 carousel_box">
                         <div class="content">
-                            <div class="carousel_title wow animate__fadeInUp animate__animated"
-                                style="width: 100%;text-align: center;">
-                                <p class="carousel_title_small">機能內衣也能有高顏值</p>
-                                <div class="tri"></div>
-                                <p class="carousel_title_big">15色任意選搭!</p>
-                            </div>
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png" alt="">
+                            <img class="midoffer_title1 wow animate__fadeInUp animate__animated"
+                                style="position: absolute;top: 9%;right: 11%;width: 78%;"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title.png" alt="">
 
                             <!-- model輪播圖(中間offer) -->
                             <div class="bg_modelCarousel--mid wow animate__fadeInUp animate__animated"

@@ -11,10 +11,6 @@
     new WOW().init();
 </script> -->
 
-<!-- google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 
 <!-- shopline offer css -->
 <style>
@@ -442,7 +438,7 @@
 
     .content {
         position: relative;
-        background: url(https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png) 100% center;
+        background: url(https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png);
         padding: 5% 0;
     }
 
@@ -473,18 +469,18 @@
     }
 
     .carousel_title_small {
-        font-family: "Noto Sans TC", sans-serif;
+        font-family: 微軟正黑體;
         font-size: 24px;
         background-color: #fea9bb;
         color: #ffffff;
         margin: 0 auto;
         width: 52%;
-        padding: 8px;
+        padding: 3px;
         letter-spacing: 3px;
     }
 
     .carousel_title_big {
-        font-family: "Noto Sans TC", sans-serif;
+        font-family: 微軟正黑體;
         font-size: 52px;
         color: #fd7d8f;
         margin: 4% auto;
@@ -503,6 +499,7 @@
     @media screen and (max-width:500px) {
         .carousel_title_small {
             width: 80%;
+            padding: 8px;
         }
 
         .carousel_title_big {
@@ -511,6 +508,7 @@
             font-size: 42px;
         }
     }
+
     /* 輪播區塊 */
 </style>
 
@@ -757,6 +755,10 @@
                         </div>
                         <div class="show_07"></div>
                     </div> -->
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+                        rel="stylesheet">
 
                     <!-- 輪播區塊 -->
                     <section class="bg bg_midoffer1 carousel_box">

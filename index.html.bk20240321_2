@@ -6,15 +6,14 @@
 <!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/loading.css"> -->
 <!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lnubhk2/css/style.css"> -->
 <link href="https://lunanaturalbra.com/hk/lnubhk/css_0124/lightbox.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allan&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 <!-- <script src="https://lunanaturalbra.com/hk/lnubhk2/js/wow.min.js"></script>
 <script>
     new WOW().init();
 </script> -->
 
-<!-- google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 
 <!-- shopline offer css -->
 <style>
@@ -442,16 +441,9 @@
 
     .content {
         position: relative;
-        background: url(https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png) 100% center;
-        padding: 5% 0;
     }
 
-    .bg_modelCarousel--mid {
-        position: relative;
-        width: 97%;
-        left: auto;
-        margin: 0 auto;
-    }
+
 
     .bg_modelCarousel--mid .row>* {
         flex-shrink: 0;
@@ -469,46 +461,105 @@
     }
 
     .carousel_title {
-        font-family: "Noto Sans TC", sans-serif;
+        position: absolute;
+        top: 8%;
+        width: 100%;
+        text-align: center;
     }
 
-    .carousel_title_small {
-        font-family: "Noto Sans TC", sans-serif;
+    .carousel_title img {
+        width: 65%;
+    }
+
+    .buble_box {
+        color: white;
+        position: absolute;
+        top: 11%;
+        left: 18%;
+        width: 65%;
+        transform: rotate(-2deg);
+    }
+
+    .buble_text01 {
+        font-family: "Allan", serif;
+        font-size: 46px;
+        letter-spacing: 6px;
+        margin: 12px;
+    }
+
+    .buble_text02 {
+        font-family: "Noto Serif TC", serif;
+        font-weight: 700;
+        font-style: normal;
         font-size: 24px;
-        background-color: #fea9bb;
-        color: #ffffff;
-        margin: 0 auto;
-        width: 52%;
-        padding: 8px;
-        letter-spacing: 3px;
+        letter-spacing: 6px;
+        margin: 0;
     }
 
     .carousel_title_big {
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 52px;
-        color: #fd7d8f;
-        margin: 4% auto;
-        letter-spacing: 10px;
+        font-family: "Noto Serif TC", serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #D7627C;
+        font-size: 56px;
+        letter-spacing: 5px;
+        width: 80%;
+        margin: 33px auto 0 auto;
+        border-bottom: 1px #D7627C solid;
+        padding-bottom: 30px
     }
 
-    .tri {
-        margin: 0 auto;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 18.6px 10px 0 10px;
-        border-color: #fea9bb transparent transparent transparent;
+    .carousel_title_big span {
+        font-size: 36px;
     }
 
-    @media screen and (max-width:500px) {
-        .carousel_title_small {
-            width: 80%;
+    @media screen and (max-width:600px) {
+        .buble_text01 {
+            font-size: 42px;
+            margin: 7px;
+        }
+
+        .buble_text02 {
+            font-size: 18px;
+            letter-spacing: 4px;
         }
 
         .carousel_title_big {
-            margin: 4% auto;
-            letter-spacing: 8px;
-            font-size: 42px;
+            font-size: 46px;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .carousel_title {
+            top: 6%;
+        }
+
+        .carousel_title img {
+            width: 82%;
+        }
+
+        .carousel_title_big {
+            font-size: 36px;
+            margin: 18px auto 0 auto;
+            padding-bottom: 20px;
+            width: 85%;
+        }
+    }
+
+    @media screen and (max-width:400px) {
+        .buble_text01 {
+            font-size: 38px;
+            margin: 4px;
+        }
+
+        .carousel_title_big {
+            font-size: 32px;
+            margin: 18px auto 0 auto;
+            padding-bottom: 20px;
+        }
+
+        .carousel_title_big span {
+            font-size: 28px;
         }
     }
     /* 輪播區塊 */
@@ -757,16 +808,29 @@
                         </div>
                         <div class="show_07"></div>
                     </div> -->
-
+                                        
                     <!-- 輪播區塊 -->
                     <section class="bg bg_midoffer1 carousel_box">
                         <div class="content">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png" alt="">
                             <div class="carousel_title wow animate__fadeInUp animate__animated"
                                 style="width: 100%;text-align: center;">
-                                <p class="carousel_title_small">機能內衣也能有高顏值</p>
-                                <div class="tri"></div>
-                                <p class="carousel_title_big">15色任意選搭!</p>
+                                <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title_bg.png"
+                                    alt="">
+                                <div class="buble_box" style="color:white;transform: rotate(-2deg);">
+                                    <p class="buble_text01" style='font-family: "Allan", serif;'>15Colors</p>
+                                    <p class="buble_text02"
+                                        style='font-family: "Noto Serif TC", serif;font-weight: 700;font-style: normal;'>
+                                        機能內衣也能有高顏值!</p>
+                                </div>
+                                <p class="carousel_title_big"
+                                    style='font-family: "Noto Serif TC", serif;font-weight: 700;font-style: normal;color:#D7627C;'>
+                                    15<span>種</span>顏色任意選搭</p>
                             </div>
+
+                            <!-- <img class="midoffer_title1 wow animate__fadeInUp animate__animated"
+                                style="position: absolute;top: 9%;right: 11%;width: 78%;"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title.png" alt=""> -->
 
                             <!-- model輪播圖(中間offer) -->
                             <div class="bg_modelCarousel--mid wow animate__fadeInUp animate__animated"
@@ -2303,12 +2367,24 @@
                     <!-- 輪播區塊 -->
                     <section class="bg bg_midoffer1 carousel_box">
                         <div class="content">
+                            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer1.png" alt="">
                             <div class="carousel_title wow animate__fadeInUp animate__animated"
                                 style="width: 100%;text-align: center;">
-                                <p class="carousel_title_small">機能內衣也能有高顏值</p>
-                                <div class="tri"></div>
-                                <p class="carousel_title_big">15色任意選搭!</p>
+                                <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title_bg.png"
+                                    alt="">
+                                <div class="buble_box" style="color:white;transform: rotate(-2deg);">
+                                    <p class="buble_text01" style='font-family: "Allan", serif;'>15Colors</p>
+                                    <p class="buble_text02"
+                                        style='font-family: "Noto Serif TC", serif;font-weight: 700;font-style: normal;'>
+                                        機能內衣也能有高顏值!</p>
+                                </div>
+                                <p class="carousel_title_big"
+                                    style='font-family: "Noto Serif TC", serif;font-weight: 700;font-style: normal;color:#D7627C;'>
+                                    15<span>種</span>顏色任意選搭</p>
                             </div>
+                            <!-- <img class="midoffer_title1 wow animate__fadeInUp animate__animated"
+                                style="position: absolute;top: 9%;right: 11%;width: 78%;"
+                                src="https://lunanaturalbra.com/hk/lnubhk2/imgs/offer2/midoffer-title.png" alt=""> -->
 
                             <!-- model輪播圖(中間offer) -->
                             <div class="bg_modelCarousel--mid wow animate__fadeInUp animate__animated"
